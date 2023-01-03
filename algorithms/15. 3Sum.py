@@ -2,7 +2,6 @@ class Solution(object):
     def threeSum(self, nums):
         nums.sort()
         a = []
-        print('nums', nums)
         for i, v in enumerate(nums):
             if i > 0 and v == nums[i - 1]:
                 continue
