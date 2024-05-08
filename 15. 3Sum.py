@@ -26,4 +26,3 @@ class Solution:
                             k[key] = True
                             ans.append(sorted_ans)
         return ans
-
