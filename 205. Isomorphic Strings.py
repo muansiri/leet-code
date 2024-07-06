@@ -1,16 +1,13 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        d = {}
-        e = {}
-        for i in range(len(s)):
-            c = s[i]
-            if c in d and t[i] != d[c]:
+        z = zip(s, t)
+        mapS, mapT = {}, {}
+        for d in z:
+            a, b = d
+            if a in mapS and mapS[a] != b:
                 return False
-            d[c] = t[i]
-
-            c = t[i]
-            if c in e and s[i] != e[c]:
+            if b in mapT and mapT[b] != a:
                 return False
-            e[c] = s[i]
+            mapS[a] = b
+            mapT[b] = a
         return True
-
